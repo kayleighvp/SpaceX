@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+body{
+	background-color:#020413;
+	background-image: url("images/background-sky.jpg");
+	background-repeat:no-repeat;
+	font-family: 'Mulish', sans-serif;
+	color: white;
+	display:grid;
+    grid-template-columns: 1fr; 
+    grid-gap: 10px; 
+	grid-template-areas: 
+         "balk"
+		 "intro"
+          "box1"
+          "box2"
+          "box3"
+		  "box4"
+		  "box5"; 
+}
+header{
+	grid-area: balk;
+	background-color:#272F3B;
+	border-radius:5px;
+}
+.intro{
+	grid-area: intro;
+	margin: 10px 20px;
+}
+.container{
+	grid-area: box1;
+}
+.container2{
+	grid-area: box2;
+}
+.container3{
+	grid-area: box3;
+}
+.container4{
+	grid-area: box4;
+}
+.container5{
+	grid-area: box5;
+}
+strong{
+	color:#FF9234;
+}
+.container, .container2, .container3, .container4, .container5{
+	padding: 20px 20px 20px 20px;
+	margin: 0px 10px 0px 10px ;
+	background-color:#272F3B;
+	border-radius: 10px;	
+}
+
+.logo{
+	width: 200px;
+	float:left;
+	padding: 10px 20px 10px 10px;
+}
+.profiel{
+	width:100px;
+	float: right;
+	padding: 5px 0px 5px 10px;
+}
+@media (min-width:550px){
+	
+	.container, .container2, .container3, .container4, .container5{
+		width: 420px;
+		height: 420px;
+		margin: 0 auto;
+	}
+	.intro{
+		margin: 0 auto;
+		width:404px;
+	}
+}
+@media (min-width:700px){
+	body{
+	display:grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 0px; 
+	grid-template-areas: 
+         "balk balk"
+		 "intro box1"
+          "box2 box3"
+          "box4 box5"; 	
+	}
+	.intro, .container, .container2, .container3, .container4, .container5{
+	width:85%;
+	height:86%;
+	margin-top:10px;
+	}
+	.profiel{
+	padding-right: 20px;
+	}
+}
+@media(min-width:1000px){
+	body{
+	display:grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 5px; 
+	grid-template-areas: 
+         "balk balk balk"
+		 "intro intro intro"
+         "box1 box2 box2"
+		 "box3 box4 box5"; 	
+	}
+	.intro{
+		width: 60%;
+		margin-left:20px;
+	}
+	.container{
+		height:340px;
+		font-size: 12px;
+	}
+	#lineChart{
+		max-height: 100%;
+		max-width: 80%;
+		padding-left: 50px;
+	}
+	.container2{
+		height:340px;
+		width:92%;
+	}	
+}
+@media(min-width: 1200px){
+	
+}
