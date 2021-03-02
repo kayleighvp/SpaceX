@@ -1,43 +1,43 @@
-var doughnutChart= document.getElementById('doughnutChart').getContext('2d');
-	var daysMarsChart = new Chart(doughnutChart, {
-		type:'doughnut', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
-		data:{
-			labels:['Days in space', 'Days till landing on Mars '],
-			datasets:[{
-				data:[200,13], //labels benoemd en getal gegeven per label
+var doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+    var daysMarsChart = new Chart(doughnutChart, {
+        type: 'doughnut', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
+        data: {
+            labels: ['Days in space', 'Days till landing on Mars '],
+            datasets: [{
+            data: [200, 13], //labels benoemd en getal gegeven per label
 				backgroundColor:[
 				'rgb(255, 146, 52 )',
 				'rgb(119, 58, 6 )',
 			], // twee kleuren aan de donut grafiek gegeven
-				borderWidth:1,
+				borderWidth: 1,
 				borderColor:'#000000',
-				hoverBorderWidth:3,// rand aan grafiek gegeven en in hover staat dikker gemaakt
+				hoverBorderWidth: 3// rand aan grafiek gegeven en in hover staat dikker gemaakt
 			}]
 			},
-		options:{
-			title:{
+		options: {
+			title: {
 				display:true,
 				text:'Days of traveling to Mars',
 				fontSize: 15,
 				fontColor:'#FFFFFF' //titel aan grafiek gegeven
 			},
-		animation:{
+		animation: {
 			easing:'easeInOutCirc', // cirkel animatie 
-			duration: 1000,
+			duration: 1000
 			},
-		legend:{
+		legend: {
 			display: false, //als je de legenda wel wil tonen
 			},
-		tooltips:{
+		tooltips: {
 				enabled:true,
 			},	// als je de hover extra waardes wel wil tonen
 		responsive: true
 		}
 	});
 	
-var lineChart= document.getElementById('lineChart').getContext('2d');
+var lineChart = document.getElementById('lineChart').getContext('2d');
 	var tempChart = new Chart(lineChart, {
-		type:'line', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		type: 'line', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
 		data: {
 			datasets: [{
             label: 'lowest temperature in degrees',
@@ -50,40 +50,40 @@ var lineChart= document.getElementById('lineChart').getContext('2d');
             label: 'highest temperature in degrees',
             data: [-7, -20, -23, -20, -4, 0, 2, 1, 1, 4, -1, -3],
             type: 'line',
-			borderColor:['rgb(255, 183, 0)'], // de bovenste lijn met  temperaturen
+			borderColor: ['rgb(255, 183, 0)'], // de bovenste lijn met  temperaturen
             pointBackgroundColor: '#FFB700',
 			order: 2
 			}],
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 		},
-		options:{
-			title:{
+		options: {
+			title: {
 				display:true, 
-				text:'Temperature on Mars',
+				text: 'Temperature on Mars',
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
-			legend:{
+			legend: {
 				display: true, //als je de legenda wel wil tonen
 				position:'bottom',
-			labels:{
+			labels: {
 				fontColor:'#FFFFFF'
 				}
 			},
-			tooltips:{
+			tooltips: {
 				enabled:true
 			},// als je de hover extra waardes wel wil tonen
-			animation:{
+			animation: {
 			easing:'linear', // lijnen animatie 
 			duration: 800
 			},
-			scales:{
+			scales: {
 				yAxes:[{
                 ticks: {
                     fontColor: "FFFFFF",
                 }
             }],
-            xAxes:[{
+            xAxes: [{
                 ticks: {
                     fontColor: "FFFFFF",
                 }
@@ -93,19 +93,19 @@ var lineChart= document.getElementById('lineChart').getContext('2d');
 		}
 	});
 
-var horizonChart= document.getElementById('horizonChart').getContext('2d');
+var horizonChart = document.getElementById('horizonChart').getContext('2d');
 	var gravityChart = new Chart(horizonChart, {
-		type:'horizontalBar', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		type: 'horizontalBar', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
 		data:{
-			labels:['Mars', 'Earth'],
-			datasets:[{
+			labels: ['Mars', 'Earth'],
+			datasets: [{
 				label:'gravity in m/s2',
 				fill: true,
 			data:[
 				3.711,
 				9.807
 			],
-			backgroundColor:[
+			backgroundColor: [
 				'rgb(255, 96, 0)',
 				'rgb(97, 217, 204)'
 			],
@@ -113,31 +113,31 @@ var horizonChart= document.getElementById('horizonChart').getContext('2d');
 				hoverBorderColor:'#000000' //verandert de rand met hover,
 			}]
 		},
-		options:{
-			title:{
+		options: {
+			title: {
 				display:true, 
 				text:'Gravity',
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
-		animation:{
+		animation: {
 			easing:'linear', // lijnen animatie 
 			duration: 800
 			},
-		legend:{
+		legend: {
 				display: false, //als je de legenda wel wil tonen
 				position:'right', //gaat de titel naar de rechter kant
 			},
-		tooltips:{
+		tooltips: {
 				enabled:true
 			}, // als je de hover extra waardes wel wil tonen
-		scales:{
+		scales: {
 				yAxes:[{
                 ticks: {
                     fontColor: "FFFFFF",
                 }
             }],
-            xAxes:[{
+            xAxes: [{
                 ticks: {
                     fontColor: "FFFFFF",
                 }
@@ -147,19 +147,19 @@ var horizonChart= document.getElementById('horizonChart').getContext('2d');
 		}
 	});
 
-var pieMarsChart= document.getElementById('pieMarsChart').getContext('2d');
+var pieMarsChart = document.getElementById('pieMarsChart').getContext('2d');
 	var atmosphereChart = new Chart(pieMarsChart, {
-		type:'pie', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		type: 'pie', //bar, horizontalBar, pie, line, doughnut, radar, polarArea
 		data:{
-			labels:['Carbon dioxide in percentage', 'Argon in percentage','Nitrogen in percentage', 'Oxygen in percentage'],
-			datasets:[{
-				data:[
+			labels: ['Carbon dioxide in percentage', 'Argon in percentage','Nitrogen in percentage', 'Oxygen in percentage'],
+			datasets: [{
+				data: [
 				95.32,
 				1.6,
 				2.7,
 				0.38
 			],
-			backgroundColor:[
+			backgroundColor: [
 				'rgb(255, 127, 53 )',
 				'rgb(255, 183, 0 )',
 				'rgb(255, 96, 0 )',
@@ -170,38 +170,38 @@ var pieMarsChart= document.getElementById('pieMarsChart').getContext('2d');
 				hoverBorderWidth:2
 			}]
 			},
-		options:{
-			title:{
+		options: {
+			title: {
 				display:true,
 				text:'Atmosphere on Mars',
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
-		animation:{
+		animation: {
 			easing:'easeInOutCirc', // cirkel animatie 
 			duration: 1000
 			},	
-		legend:{
+		legend: {
 			display: true, //als je de legenda wel wil tonen
 			position:'bottom', //gaat de titel naar de rechter kant
-		labels:{
+		labels: {
 				fontColor:'#FFFFFF'
 			}
 			},
-			tooltips:{
+			tooltips: {
 				enabled:true,
 			}, // als je de hover extra waardes wel wil tonen
 		responsive: true
 		}
 	});
 
-var pieEarthChart= document.getElementById('pieEarthChart').getContext('2d');
+var pieEarthChart = document.getElementById('pieEarthChart').getContext('2d');
 	var atmosphereChart = new Chart(pieEarthChart, {
-		type:'pie', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
+		type: 'pie', // kiezen uit bar, horizontalBar, pie, line, doughnut, radar, polarArea
 		data:{
-			labels:['Nitrogen in percentage', 'Oxygen in percentage', 'Argon in percentage'],
-			datasets:[{
-				data:[
+			labels: ['Nitrogen in percentage', 'Oxygen in percentage', 'Argon in percentage'],
+			datasets: [{
+				data: [
 				78,
 				21,
 				1
@@ -211,31 +211,31 @@ var pieEarthChart= document.getElementById('pieEarthChart').getContext('2d');
 				'rgb(97, 217, 204 )',
 				'rgb(21, 86, 129 )'
 			],
-				borderWidth:0.5,
+				borderWidth: 0.5,
 				borderColor:'#000000',
-				hoverBorderWidth:2,
+				hoverBorderWidth: 2
 			}]
 			},
-		options:{
-			title:{
+		options: {
+			title: {
 				display:true,
 				text:'Atmosphere on Earth',
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
-		animation:{
+		animation: {
 			easing:'easeInOutCirc', // cirkel animatie 
 			duration: 1000
 			},				
-		legend:{
+		legend: {
 			display: true, //als je de legenda wel wil tonen
 			position:'bottom', //gaat de titel naar de rechter kant
-		labels:{
+		labels: {
 				fontColor:'#FFFFFF'
 			}
 			},
-		tooltips:{
-				enabled:true,
+		tooltips: {
+				enabled:true
 			},
 		responsive: true
 		}
