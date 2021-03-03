@@ -17,16 +17,16 @@ var doughnutChart = document.getElementById('doughnutChart').getContext('2d');
 		options: {
 			title: {
 				display:true,
-				text:'Days of traveling to Mars',
+				text:'Days of traveling to Mars', //titel van de grafiek
 				fontSize: 15,
-				fontColor:'#FFFFFF' //titel aan grafiek gegeven
+				fontColor:'#FFFFFF' 
 			},
 		animation: {
 			easing:'easeInOutCirc', // cirkel animatie 
 			duration: 1000
 			},
 		legend: {
-			display: false, //als je de legenda wel wil tonen
+			display: false, //als je de legenda niet wil tonen
 			},
 		tooltips: {
 				enabled:true,
@@ -59,7 +59,7 @@ var lineChart = document.getElementById('lineChart').getContext('2d');
 		options: {
 			title: {
 				display:true, 
-				text: 'Temperature on Mars',
+				text: 'Temperature on Mars', //titel van de grafiek
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
@@ -116,7 +116,7 @@ var horizonChart = document.getElementById('horizonChart').getContext('2d');
 		options: {
 			title: {
 				display:true, 
-				text:'Gravity',
+				text:'Gravity', //titel van de grafiek
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
@@ -125,8 +125,7 @@ var horizonChart = document.getElementById('horizonChart').getContext('2d');
 			duration: 800
 			},
 		legend: {
-				display: false, //als je de legenda wel wil tonen
-				position:'right', //gaat de titel naar de rechter kant
+				display: false, //als je de legenda niet wil tonen
 			},
 		tooltips: {
 				enabled:true
@@ -173,7 +172,7 @@ var pieMarsChart = document.getElementById('pieMarsChart').getContext('2d');
 		options: {
 			title: {
 				display:true,
-				text:'Atmosphere on Mars',
+				text:'Atmosphere on Mars', //titel van de grafiek
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
@@ -183,7 +182,7 @@ var pieMarsChart = document.getElementById('pieMarsChart').getContext('2d');
 			},	
 		legend: {
 			display: true, //als je de legenda wel wil tonen
-			position:'bottom', //gaat de titel naar de rechter kant
+			position:'bottom', //gaat de legenda onder de grafiek
 		labels: {
 				fontColor:'#FFFFFF'
 			}
@@ -219,7 +218,7 @@ var pieEarthChart = document.getElementById('pieEarthChart').getContext('2d');
 		options: {
 			title: {
 				display:true,
-				text:'Atmosphere on Earth',
+				text:'Atmosphere on Earth', //titel van de grafiek
 				fontSize: 15,
 				fontColor:'#FFFFFF'
 			},
@@ -229,7 +228,7 @@ var pieEarthChart = document.getElementById('pieEarthChart').getContext('2d');
 			},				
 		legend: {
 			display: true, //als je de legenda wel wil tonen
-			position:'bottom', //gaat de titel naar de rechter kant
+			position:'bottom', //gaat de legenda onder de grafiek
 		labels: {
 				fontColor:'#FFFFFF'
 			}
